@@ -30,7 +30,7 @@ public class ControladorInicio {
         persona2.setNombre("Juan");
         persona2.setApellido("Perez");
         persona2.setEmail("juan@gmail.com");
-        persona2.setTelefono("44332211");
+        persona2.setTelefono("11559977");
         
 //        List<Persona> personas = new ArrayList();
 //        personas.add(persona);

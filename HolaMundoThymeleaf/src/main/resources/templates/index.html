@@ -10,20 +10,24 @@
         <p th:text="${mensaje}"></p>
         <p th:text="${saludo}"></p>
         <p th:text="${persona}"></p>
-        <table border="1">
-            <tr>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Email</th>
-                <th>Telefono</th>
-            </tr>
-            <tr th:each="persona : ${personas}">
-                <td th:text="${persona.nombre}"></td>
-                <td th:text="${persona.apellido}"></td>
-                <td th:text="${persona.email}"></td>
-                <td th:text="${persona.telefono}"></td>
-            </tr>
-        </table>
 
+        <div th:if="${personas != null and !personas.empty}">
+            <table border="1">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                </tr>
+
+                <tr th:each="persona : ${personas}">
+                    <td th:text="${persona.nombre}"></td>
+                    <td th:text="${persona.apellido}"></td>
+                    <td th:text="${persona.email}"></td>
+                    <td th:text="${persona.telefono}"></td>
+                </tr>
+
+            </table>
+        </div>
     </body>
 </html>
